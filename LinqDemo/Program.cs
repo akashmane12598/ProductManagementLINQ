@@ -41,6 +41,10 @@ namespace LinqDemo
 
             Console.WriteLine();
 
+            Management.RetrievePRoductIDAndReviewsUC5(reviews);
+
+            Console.WriteLine();
+
         }
 
     }

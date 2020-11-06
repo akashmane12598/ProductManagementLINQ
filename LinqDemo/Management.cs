@@ -41,5 +41,22 @@ namespace LinqDemo
             }
         }
 
+        /// <summary>
+        /// UC5 When dealing with more than one column always use anoynomous obj(new {})
+        /// </summary>
+        /// <param name="reviews"></param>
+        public static void RetrievePRoductIDAndReviewsUC5(List<ProductReview> reviews)
+        {
+            //In Query Synatx
+            var qlist = from product in reviews select new { product.ProductID, product.Review  };
+
+            //In Method Syntax
+            var mlist = reviews.Select(x => new { x.ProductID, x.Review });
+
+            foreach (var product in qlist)
+            {
+                Console.WriteLine("Product ID: " + product.ProductID + " Review: " + product.Review);
+            }
+        }
     }
 }
