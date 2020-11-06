@@ -31,5 +31,15 @@ namespace LinqDemo
 
         }
 
+        public static void RetrieveCountOfProductReviewsForEachIDUC4(List<ProductReview> reviews)
+        {
+            var resultData = reviews.GroupBy(x => x.ProductID).Select(x => new { ProductID = x.Key, Count = x.Count() }).OrderBy(x => x.ProductID);
+
+            foreach (var res in resultData)
+            {
+                Console.WriteLine("Product ID: " + res.ProductID + " Count: " + res.Count);
+            }
+        }
+
     }
 }

@@ -37,6 +37,10 @@ namespace LinqDemo
 
             Console.WriteLine();
 
+            Management.RetrieveCountOfProductReviewsForEachIDUC4(reviews);
+
+            Console.WriteLine();
+
         }
 
     }
