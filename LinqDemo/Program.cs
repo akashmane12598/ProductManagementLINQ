@@ -63,6 +63,10 @@ namespace LinqDemo
             Console.WriteLine("UC8(Fetch records from DataTable)");
             Management.CreateDataTableUC8();
 
+            Console.WriteLine();
+            Console.WriteLine("UC9 Fetch rows where IsLike is true");
+            Management.RetrieveRowByIsLikeUC9();
+
         }
 
     }

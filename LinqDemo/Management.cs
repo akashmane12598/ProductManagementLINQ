@@ -96,6 +96,21 @@ namespace LinqDemo
 
         }
 
+        /// <summary>
+        /// Incorrect Code
+        /// </summary>
+        public static void RetrieveRowByIsLikeUC9()
+        {
+            //var rows = from product in table.AsEnumerable() where product.Field<string>("IsLike").Contains(true) select product; 
+
+            var rows = table.AsEnumerable().Where(x => x.Field<string>("IsLike")=="true").Select(x => x);
+
+            foreach(var row in rows)
+            {
+                Console.WriteLine("ProductID: " + row.Field<string>("ProductID") + ", UserID: " + row.Field<string>("UserID") + ", Ratings: " + row.Field<string>("Ratings") + " , Review: " + row.Field<string>("Review") + " , IsLike: " + row.Field<string>("IsLike"));
+            }
+        }
+
         public static void DisplayDataTable()
         {
             var stringTable = from product in table.AsEnumerable() select product;
