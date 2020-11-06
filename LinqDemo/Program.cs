@@ -21,6 +21,8 @@ namespace LinqDemo
                 new ProductReview(){ ProductID = 8, UserID = 8, Ratings = 1, Review = "Bad", IsLike = false},
                 new ProductReview(){ ProductID = 20, UserID = 20, Ratings = 9, Review = "Good", IsLike = true},
                 new ProductReview(){ ProductID = 21, UserID = 21, Ratings = 3, Review = "Nice", IsLike = false},
+                new ProductReview(){ ProductID = 11, UserID = 11, Ratings = 3, Review = "Nice", IsLike = false},
+                new ProductReview(){ ProductID = 14, UserID = 14, Ratings = 10, Review = "Good", IsLike = true},
                 new ProductReview(){ ProductID = 23, UserID = 23, Ratings = 4, Review = "Good", IsLike = true}
             };
 
@@ -58,6 +60,8 @@ namespace LinqDemo
             Management.SkipTop5RecordsUC6(reviews);
 
             Console.WriteLine();
+            Console.WriteLine("UC8(Fetch records from DataTable)");
+            Management.CreateDataTableUC8();
 
         }
 
