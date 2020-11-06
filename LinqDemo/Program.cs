@@ -24,24 +24,38 @@ namespace LinqDemo
                 new ProductReview(){ ProductID = 23, UserID = 23, Ratings = 4, Review = "Good", IsLike = true}
             };
 
+            Console.WriteLine();
+            Console.WriteLine("UC1");
+
             foreach(ProductReview review in reviews)
             {
                 Console.WriteLine("ProductID: "+review.ProductID+ ", UserID: "+review.UserID+ ", Ratings: "+review.Ratings+ " , Review: "+review.Review+ " , IsLike: "+review.IsLike);
             }
 
+            Console.WriteLine();
+            Console.WriteLine("UC2");
+
             Management.RetrieveTop(reviews);
 
             Console.WriteLine();
+            Console.WriteLine("UC3");
 
             Management.UC3(reviews);
 
             Console.WriteLine();
+            Console.WriteLine("UC4");
 
             Management.RetrieveCountOfProductReviewsForEachIDUC4(reviews);
 
             Console.WriteLine();
+            Console.WriteLine("UC5");
 
             Management.RetrievePRoductIDAndReviewsUC5(reviews);
+
+            Console.WriteLine();
+            Console.WriteLine("UC6");
+
+            Management.SkipTop5RecordsUC6(reviews);
 
             Console.WriteLine();
 
