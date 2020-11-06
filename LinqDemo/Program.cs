@@ -29,27 +29,15 @@ namespace LinqDemo
                 Console.WriteLine("ProductID: "+review.ProductID+ ", UserID: "+review.UserID+ ", Ratings: "+review.Ratings+ " , Review: "+review.Review+ " , IsLike: "+review.IsLike);
             }
 
-           
+            Management.RetrieveTop(reviews);
 
-            /*DataTable table = new DataTable();
-            table.Columns.Add("ID");
-            table.Columns.Add("ProductName");
+            Console.WriteLine();
 
-            table.Rows.Add("1","Chai");
-            table.Rows.Add("2","Coffee");
-            table.Rows.Add("3","Milk");
+            Management.UC3(reviews);
 
-            ProductDisplay(table);*/
+            Console.WriteLine();
 
         }
 
-        /*public static void ProductDisplay(DataTable table)
-        {
-            var productNames = from products in table.AsEnumerable() select products.Field<string>("ProductName");
-            foreach(string productName in productNames)
-            {
-                Console.WriteLine(productName);
-            }
-        }*/
     }
 }
