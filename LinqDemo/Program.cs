@@ -71,6 +71,10 @@ namespace LinqDemo
             Console.WriteLine("UC10 Find Average Ratings per Product ID");
             Management.FindAvgRatingsPerProductIDUC10(reviews);
 
+            Console.WriteLine();
+            Console.WriteLine("UC11 Retrieve Nice Message from Product Reviews");
+            Management.RetrieveNiceMsgUC11(reviews);
+
         }
 
     }
