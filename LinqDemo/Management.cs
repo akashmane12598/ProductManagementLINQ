@@ -10,6 +10,7 @@ namespace LinqDemo
     {
         public readonly DataTable table = new DataTable();
 
+
         public static void RetrieveTop(List<ProductReview> reviews)
         {
             var list = (from products in reviews orderby products.Ratings descending select products).Take(3).ToList();
