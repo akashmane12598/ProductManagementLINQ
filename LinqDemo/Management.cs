@@ -92,7 +92,7 @@ namespace LinqDemo
             table.Rows.Add(14, 14,10, "Good", true);
             table.Rows.Add(23, 23, 4, "Good", true);
 
-            DisplayDataTable();
+            //DisplayDataTable();
 
         }
 
@@ -130,6 +130,28 @@ namespace LinqDemo
             {
                 Console.WriteLine("ProductID: " + review.ProductID + ", UserID: " + review.UserID + ", Ratings: " + review.Ratings + " , Review: " + review.Review + " , IsLike: " + review.IsLike);
             }
+        }
+
+        public static void AddandRetrieveRecordOfaUserIDUC12()
+        {
+            //CreateDataTableUC8();
+
+            table.Rows.Add(20, 10, 9, "Good", true);
+            table.Rows.Add(21, 10, 3, "Nice", false);
+            table.Rows.Add(11, 10, 3, "Nice", false);
+            table.Rows.Add(14, 10, 10, "Good", true);
+            table.Rows.Add(23, 10, 4, "Good", true);
+
+            //var list = (from products in table.AsEnumerable() where products.Field<string>("UserID") == "10" orderby products.Field<string>("Ratings") descending select products);
+
+            var list = table.AsEnumerable().Where(x => x.Field<string>("UserID") == "10").Select(x => x).OrderByDescending(x => Convert.ToInt32(x.Field<string>("Ratings")) );
+
+            foreach (var row in list )
+            {
+                //Console.WriteLine(row);
+                Console.WriteLine("ProductID: " + row.Field<string>("ProductID") + ", UserID: " + row.Field<string>("UserID") + ", Ratings: " + row.Field<string>("Ratings") + " , Review: " + row.Field<string>("Review") + " , IsLike: " + row.Field<string>("IsLike"));
+            }
+
         }
 
         public static void DisplayDataTable()

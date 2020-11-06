@@ -75,6 +75,10 @@ namespace LinqDemo
             Console.WriteLine("UC11 Retrieve Nice Message from Product Reviews");
             Management.RetrieveNiceMsgUC11(reviews);
 
+            Console.WriteLine();
+            Console.WriteLine("UC12 Add and retrieve record from Table based on UserID");
+            Management.AddandRetrieveRecordOfaUserIDUC12();
+
         }
 
     }
