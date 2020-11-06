@@ -29,8 +29,7 @@ namespace LinqDemo
                 Console.WriteLine("ProductID: "+review.ProductID+ ", UserID: "+review.UserID+ ", Ratings: "+review.Ratings+ " , Review: "+review.Review+ " , IsLike: "+review.IsLike);
             }
 
-            
-
+           
 
             /*DataTable table = new DataTable();
             table.Columns.Add("ID");
