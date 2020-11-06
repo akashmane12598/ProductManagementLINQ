@@ -111,6 +111,17 @@ namespace LinqDemo
             }
         }
 
+        public static void FindAvgRatingsPerProductIDUC10(List<ProductReview> reviews)
+        {
+            var list = reviews.GroupBy(x => x.ProductID);
+
+            //Iterating for each ProductID and Calulating Avg Ratings
+            foreach (var groups in list)
+            {
+                Console.WriteLine("ProductID: "+ groups.Key+" Average Ratings: "+groups.Average(x => x.Ratings));
+            }
+        }
+
         public static void DisplayDataTable()
         {
             var stringTable = from product in table.AsEnumerable() select product;

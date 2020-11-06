@@ -67,6 +67,10 @@ namespace LinqDemo
             Console.WriteLine("UC9 Fetch rows where IsLike is true");
             Management.RetrieveRowByIsLikeUC9();
 
+            Console.WriteLine();
+            Console.WriteLine("UC10 Find Average Ratings per Product ID");
+            Management.FindAvgRatingsPerProductIDUC10(reviews);
+
         }
 
     }
